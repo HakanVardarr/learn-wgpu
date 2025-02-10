@@ -13,7 +13,7 @@ pub struct App<'a> {
 impl<'a> ApplicationHandler for App<'a> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         let window = event_loop
-            .create_window(WindowAttributes::default().with_title("Hello World!"))
+            .create_window(WindowAttributes::default().with_title("Learn WGPU!"))
             .unwrap();
         self.engine = Some(Engine::new(std::sync::Arc::new(window)));
     }
