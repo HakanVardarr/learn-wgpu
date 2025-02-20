@@ -1,13 +1,12 @@
-use learn_wgpu::run;
-use pollster::FutureExt;
+use wgpu_engine::core::application::Application;
 
 fn main() {
     env_logger::init();
 
-    match run().block_on() {
+    match Application::run() {
         Ok(_) => {}
         Err(e) => {
-            eprintln!("ERROR: {e}")
+            eprintln!("[ERROR]: {e}");
         }
     }
 }
